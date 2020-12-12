@@ -7,15 +7,15 @@
     - Deploy VPA 
 # Build and Push Docker Image
     docker build -t naresh240/application-cpu:latest .
-	  docker login
-	  docker push naresh240/application-cpu:latest
+    docker login
+    docker push naresh240/application-cpu:latest
 # Deploy Metrics in Cluster
     kubectl apply -f ./metrics-server
 # Install Vertical Pod Autoscaler
-	  git clone https://github.com/kubernetes/autoscaler.git
-	  git checkout vpa-release-0.8
-	  cd autoscaler/vertical-pod-autoscaler
-	  ./hack/vpa-up.sh
+    git clone https://github.com/kubernetes/autoscaler.git
+    git checkout vpa-release-0.8
+    cd autoscaler/vertical-pod-autoscaler
+    ./hack/vpa-up.sh
 # Deploy Application
     kubectl apply -f deployment.yaml
 # Deploy VPA rule for application
@@ -37,7 +37,7 @@
   Step3: Give below commands to increase load
       
     apk add --no-cache wrk
-		wrk -c 5 -t 5 -d 99999 -H "Connection: Closed" http://application-cpu
+    wrk -c 5 -t 5 -d 99999 -H "Connection: Closed" http://application-cpu
 # Check pods using "--watch"
     kubectl get pods --watch
 # Change update policy
