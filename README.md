@@ -4,7 +4,9 @@
     - Install Docker
     - EKS Cluster
     - Deploy Metrics
-    - Deploy VPA 
+    - Deploy VPA
+# EKS Cluster Setup:
+  [EKS Cluster Setup](https://github.com/Naresh240/eks-cluster-setup/blob/main/README.md)
 # Build and Push Docker Image
     docker build -t naresh240/application-cpu:latest .
     docker login
