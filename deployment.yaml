@@ -24,7 +24,7 @@ spec:
   selector:
     matchLabels:
       app: application-cpu
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
